@@ -30,16 +30,18 @@
 
     <div class="datas">
         <div class="datas-location">
-            <h1 *ngIf="main && main.temp">{{main.temp}}</h1>
+            <h1 *ngIf="main && main.temp">{{main.temp}}ºC</h1>
             <p>Atual</p>
         </div>
     
         <div class="datas-location">
-            
+            <h1 *ngIf="main && main.temp_min">{{main.temp_min}}ºC</h1>
+            <p>Miníma</p>
         </div>
     
         <div class="datas-location">
-            
+            <h1 *ngIf="main && main.temp_max">{{main.temp_max}}ºC</h1>
+            <p>Máxima</p>
         </div>
     
     </div>
