@@ -1,49 +1,50 @@
-<div class="header">
-    <div class="title">
-        <h1 class="title-principal">Weather Project</h1>
-    </div>
-    <div class="input-search">
-        <input type="text" id="search-field">
-        <button (click)="getAllInformations()">Testar</button>
-    </div>
-    <div class="buttons">
-        
-    </div>
-</div>
-
-<div class="main">
-    <div class="main-text">
-        <h1>Weather Project</h1>
-        <p>Criado por LG & DG</p>
-    </div>
-
-    <div class="map-box">
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467688.89495119266!2d-46.5952992!3d-23.6824124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1666712460536!5m2!1spt-BR!2sbr" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1 class="title-principal">Weather Project</h1>
         </div>
-    
-        <div class="record">
-            <div class="record-box">
+        <div class="input-search">
+            <input type="text" id="search-field">
+            <button (click)="getAllInformations()">Testar</button>
+        </div>
+        <div class="buttons">
+
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-text">
+            <h1>Weather Project</h1>
+            <p>Criado por LG & DG</p>
+        </div>
+
+        <div class="map-box">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467688.89495119266!2d-46.5952992!3d-23.6824124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1666712460536!5m2!1spt-BR!2sbr"
+                    width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
+
+        <div class="datas">
+            <div class="datas-location">
+                <h1 *ngIf="main && main.temp">{{main.temp}}ºC</h1>
+                <p>Atual</p>
+            </div>
+
+            <div class="datas-location">
+                <h1 *ngIf="main && main.temp_min">{{main.temp_min}}ºC</h1>
+                <p>Miníma</p>
+            </div>
+
+            <div class="datas-location">
+                <h1 *ngIf="main && main.temp_max">{{main.temp_max}}ºC</h1>
+                <p>Máxima</p>
+            </div>
+
+        </div>
     </div>
 
-    <div class="datas">
-        <div class="datas-location">
-            <h1 *ngIf="main && main.temp">{{main.temp}}ºC</h1>
-            <p>Atual</p>
-        </div>
-    
-        <div class="datas-location">
-            <h1 *ngIf="main && main.temp_min">{{main.temp_min}}ºC</h1>
-            <p>Miníma</p>
-        </div>
-    
-        <div class="datas-location">
-            <h1 *ngIf="main && main.temp_max">{{main.temp_max}}ºC</h1>
-            <p>Máxima</p>
-        </div>
-    
-    </div>
-</div>
 
+</body>
