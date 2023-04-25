@@ -12,4 +12,9 @@ export class HomeService {
   getAllInformations(city: any): Observable<any> {
     return this.http.get(`https://weather.contrateumdev.com.br/api/weather/city/?city=${city}`)
   }
+
+  getGeoLocation(city: any): Observable<any> {
+    return this.http.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyDI2bncZi4qo1fX7UaXMHSFOU2onVLQFj0`)
+  }
+  
 }
